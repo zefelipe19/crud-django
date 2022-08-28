@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ Contato.nome }}</title>
+</head>
+<body>
+    <h1>{{ Contato.nome }}</h1>
+    <h3>{{ Contato.idade }} anos</h3>
+    <h3>{{ Contato.email }} | {{ Contato.telefone }}</h3>
+    <p>{{ Contato.descricao | safe }}</p>
+
+    <input type="button" value="Voltar" onclick="location.href = '{% url 'ver_contatos' %}'">
+</body>
+</html>

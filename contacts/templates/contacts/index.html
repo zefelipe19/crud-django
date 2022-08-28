@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Contatos</title>
+</head>
+<body>
+    <h1>Mini Agenda Super Simples</h1>
+    <ul>
+        {% for Contato in Contatos %}
+        <li>{{ Contato.nome }}</li> 
+        <ul>
+            <li><input type="button" value="Detalhes" onclick="location.href = '{% url 'ver_contato' pk=Contato.id %}'"> | <input type="button" value="Editar ?" onclick="location.href = '{% url 'atualizar_contato' pk=Contato.id %}'"> | <input type="button" value="Apagar" onclick="location.href = '{% url 'deletar_contato' pk=Contato.id %}'"></li>
+        </ul>
+        <br>
+        {% endfor %}
+    </ul>
+    <input type="submit" value="Criar novo contato" onclick="location.href = '{% url 'criar_contato' %}'">
+</body>
+</html>
