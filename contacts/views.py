@@ -24,7 +24,7 @@ class AtualizarContato(UpdateView):
     model = Contact
     fields = '__all__'
     success_url = reverse_lazy('ver_contatos')
-    template_name = 'contacts/criar_contato.html'
+    template_name = 'contacts/atualizar_contato.html'
 
 
 class VerContato(DetailView):
